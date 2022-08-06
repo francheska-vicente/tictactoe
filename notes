@@ -1,0 +1,35 @@
+dump para di malimutan
+
+row and col always in 0-2 sa code
+> NOT 1-3 MAYGHAD
+> pag nakalimutan natin to ulit oh my god
+
+agent should return row and col values
+
+========== BUGS ============
+> Agent Zero [FIXED (ata)]
+ X |   | 
+-----------
+   | X | O
+-----------
+   |   | O
+
+^^ if naglagay ako sa top right, after nun, hindi na magmomove si comp
+		dunno WHY tho since may checker ka naman
+
+ O |   | 
+-----------
+   | O | x
+-----------
+ O | X | X
+
+> View
+weird view after 2nd game
+
+==== BOBO ====
+ X |   | 
+-----------
+   | X | 
+-----------
+   |   | O
+^^ dapat di na siya maglalagay sa 0, 0 kasi naharangan nAAA

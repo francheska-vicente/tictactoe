@@ -1,0 +1,73 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fbe459120f9, pid=226, tid=305
+#
+# JRE version: OpenJDK Runtime Environment (11.0.9.1+1) (build 11.0.9.1+1-Ubuntu-0ubuntu1.18.04)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.9.1+1-Ubuntu-0ubuntu1.18.04, mixed mode, sharing, tiered, compressed oops, serial gc, linux-amd64)
+# Problematic frame:
+# C  [libjimage.so+0x30f9]
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport %p %s %c %d %P %E" (or dumping to /home/runner/thiccthaccthoe/core.226)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugs.launchpad.net/ubuntu/+source/openjdk-lts
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: Main
+
+Host: Intel(R) Xeon(R) CPU @ 2.30GHz, 4 cores, 512M, Ubuntu 18.04.5 LTS
+Time: Sun Jan 10 07:33:54 2021 UTC elapsed time: 64.267221 seconds (0d 0h 1m 4s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fbe4033c000):  JavaThread "AWT-EventQueue-0" [_thread_in_vm, id=305, stack(0x00007fbdfa32f000,0x00007fbdfa430000)]
+
+Stack: [0x00007fbdfa32f000,0x00007fbdfa430000],  sp=0x00007fbdfa42ce00,  free space=1015k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjimage.so+0x30f9]
+C  [libjimage.so+0x35c6]  JIMAGE_FindResource+0xd6
+V  [libjvm.so+0x5bf44e]
+V  [libjvm.so+0x5c21b0]
+V  [libjvm.so+0xe427d5]
+V  [libjvm.so+0xe4008a]
+V  [libjvm.so+0xe42d62]
+V  [libjvm.so+0x677307]
+V  [libjvm.so+0xa629b3]
+V  [libjvm.so+0x873009]
+V  [libjvm.so+0x87589d]
+j  java.awt.EventDispatchThread$HierarchyEventFilter.acceptEvent(Ljava/awt/AWTEvent;)Ljava/awt/EventFilter$FilterAction;+221 java.desktop@11.0.9.1
+j  java.awt.EventDispatchThread.filterAndCheckEvent(Ljava/awt/AWTEvent;)Z+42 java.desktop@11.0.9.1
+j  java.awt.EventDispatchThread.pumpOneEventForFilters(I)V+35 java.desktop@11.0.9.1
+j  java.awt.EventDispatchThread.pumpEventsForFilter(ILjava/awt/Conditional;Ljava/awt/EventFilter;)V+35 java.desktop@11.0.9.1
+j  java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V+11 java.desktop@11.0.9.1
+j  java.awt.EventDispatchThread.pumpEvents(ILjava/awt/Conditional;)V+4 java.desktop@11.0.9.1
+j  java.awt.EventDispatchThread.pumpEvents(Ljava/awt/Conditional;)V+3 java.desktop@11.0.9.1
+j  java.awt.EventDispatchThread.run()V+9 java.desktop@11.0.9.1
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x87f359]
+V  [libjvm.so+0x87d49d]
+V  [libjvm.so+0x926c7c]
+V  [libjvm.so+0xe7b37f]
+V  [libjvm.so+0xe77acf]
+V  [libjvm.so+0xc1977e]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  java.awt.EventDispatchThread$HierarchyEventFilter.acceptEvent(Ljava/awt/AWTEvent;)Ljava/awt/EventFilter$FilterAction;+221 java.desktop@11.0.9.1
+j  java.awt.EventDispatchThread.filterAndCheckEvent(Ljava/awt/AWTEvent;)Z+42 java.desktop@11.0.9.1
+j  java.awt.EventDispatchThread.pumpOneEventForFilters(I)V+35 java.desktop@11.0.9.1
+j  java.awt.EventDispatchThread.pumpEventsForFilter(ILjava/awt/Conditional;Ljava/awt/EventFilter;)V+35 java.desktop@11.0.9.1
+j  java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V+11 java.desktop@11.0.9.1
+j  java.awt.EventDispatchThread.pumpEvents(ILjava/awt/Conditional;)V+4 java.desktop@11.0.9.1
+j  java.awt.EventDispatchThread.pumpEvents(Ljava/awt/Conditional;)V+3 java.desktop@11.0.9.1
+j  java.awt.EventDispatchThread.run()V+9 java.desktop@11.0.9.1
+v  ~StubRoutines::call_stub
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x00007fbe378daae0
+
+Register to memory mapping:
+
+RAX=0x000000000000829f is an unknown value
+RBX=0x00007fbe40009900 points into unknown readable memory:
